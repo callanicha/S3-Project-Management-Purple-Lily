@@ -7,13 +7,11 @@ import Dashboard from "./Components/dashboard/page";
 import Contact from './Components/contact/ContactCard';
 import Questionnaires from './Components/Questionnaires/[id]/page';
 import Result from './Components/results/page';
-import { Providers } from "./Provider";
 
 
 function App() { 
   
   return(
-    <Providers>
     <div>
       <Router>
         <div className="navbar-container">
@@ -39,10 +37,8 @@ function App() {
       <div className="footer">
         <Footer />
       </div>
-
       </Router>
   </div>
-  </Providers>
   )
 }
 

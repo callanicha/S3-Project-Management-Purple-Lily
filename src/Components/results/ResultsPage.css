@@ -1,128 +1,102 @@
-/* Custom Properties */
-:root {
-    --primary-color: #693d84;
-    --secondary-color: #ffd1ef;
-    --background-color: #ffeaf8;
-    --hover-color: hsl(260, 100%, 89%);
-    --active-color: hsl(261, 100%, 82%);
-    --text-color: #693d84;
-    --link-hover-color: #633560;
-    --button-bg: #693d84;
-    --button-hover-bg: hsl(260, 100%, 89%);
-    --button-active-bg: hsl(261, 100%, 82%);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Results Page Styling */
+.results-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(255, 234, 248, 0.9);
+  border: 1px solid #96569e;
+  border-radius: 10px;
+  box-shadow: 0px 10px 40px rgba(255, 209, 239, 0.6);
+  max-width: 800px;
+  width: 90%;
+}
+
+.results-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #693d84;
+}
+
+/* Bouquet Card Styling */
+.bouquet-card {
+  border: 1px solid #96569e;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(255, 209, 239, 0.6);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bouquet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 10px 25px rgba(255, 209, 239, 0.8);
+}
+
+.bouquet-name {
+  font-size: 1.8rem;
+  color: #693d84;
+  margin-bottom: 0.5rem;
+}
+
+.bouquet-description {
+  font-size: 1rem;
+  color: #633560;
+  margin-bottom: 1rem;
+}
+
+.bouquet-meaning {
+  font-size: 1rem;
+  color: #633560;
+}
+
+/* Button Styling */
+.restart-button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #693d84;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.restart-button:hover {
+  background-color: #96569e;
+  transform: scale(1.05);
+}
+
+.restart-button:active {
+  background-color: #633560;
+  transform: scale(1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .results-container {
+    padding: 1rem;
   }
-  
-  /* Results Page Container */
-  .results-page-container {
-    min-height: 100vh;
-    background: linear-gradient(to right, #9b4d96, #ff70d1, #ff5a7a);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+
+  .bouquet-card {
+    padding: 1rem;
   }
-  
-  .results-box {
-    background-color: rgba(255, 234, 248, 0.8);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    width: 100%;
-    color: var(--text-color);
-    line-height: 1.8;
-  }
-  
-  /* Title Styles */
-  .results-title {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Content Styles */
-  .results-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .results-image {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .results-subtitle {
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--primary-color);
-  }
-  
-  .results-description {
-    color: #757575;
-    margin-bottom: 1rem;
-  }
-  
-  .results-flower-title {
+
+  .bouquet-name {
     font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary-color);
   }
-  
-  .results-flower-list {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    margin-bottom: 1rem;
+
+  .bouquet-description, .bouquet-meaning {
+    font-size: 0.9rem;
   }
-  
-  .results-meaning {
-    font-size: 1rem;
-    color: #757575;
+
+  .restart-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
   }
-  
-  /* Buttons Container */
-  .results-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-  }
-  
-  /* Button Styles */
-  .btn-start-over,
-  .btn-find-shops {
-    padding: 0.8rem 2rem;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-start-over {
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-  }
-  
-  .btn-start-over:hover {
-    background-color: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
-  }
-  
-  .btn-find-shops {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-  }
-  
-  .btn-find-shops:hover {
-    background-color: hsl(260, 100%, 89%);
-    color: white;
-  }
-  
+}

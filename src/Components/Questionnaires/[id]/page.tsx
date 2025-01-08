@@ -82,14 +82,24 @@ export default function Questionnaires() {
     setAnswer(formData[question.field] || '');
   }, [formData, question]);
 
+  // const handleNext = () => {
+  //   setFormData(prev => ({ ...prev, [question.field]: answer }));
+  //   if (questionId < questions.length) {
+  //     navigate(`/questionnaires/${questionId + 1}`);
+  //   } else {
+  //     navigate('/results');
+  //   }
+  // };
+
   const handleNext = () => {
-    setFormData(prev => ({ ...prev, [question.field]: answer }));
+    setFormData((prev) => ({ ...prev, [question.field]: answer }));
     if (questionId < questions.length) {
       navigate(`/questionnaires/${questionId + 1}`);
     } else {
-      navigate('/results');
+      navigate('/results', { state: { responses: { ...formData, [question.field]: answer } } });
     }
   };
+  
 
   return (
     <div className="questionnaire-container">
