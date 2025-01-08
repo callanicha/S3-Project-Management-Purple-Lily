@@ -5,65 +5,68 @@
 /* Results Page Styling */
 .results-container {
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: rgba(255, 234, 248, 0.9);
   border: 1px solid #96569e;
   border-radius: 10px;
   box-shadow: 0px 10px 40px rgba(255, 209, 239, 0.6);
-  max-width: 800px;
+  max-width: 700px;
   width: 90%;
+  margin: 0 auto;
 }
 
 .results-container h1 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
   color: #693d84;
+  font-weight: 600;
 }
 
 /* Bouquet Card Styling */
 .bouquet-card {
   border: 1px solid #96569e;
   border-radius: 10px;
-  box-shadow: 5px 5px 20px rgba(255, 209, 239, 0.6);
-  padding: 1.5rem;
-  margin: 1rem 0;
+  box-shadow: 5px 5px 15px rgba(255, 209, 239, 0.6);
+  padding: 1.2rem;
+  margin: 0.8rem 0;
   background-color: white;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bouquet-card:hover {
   transform: translateY(-5px);
-  box-shadow: 5px 10px 25px rgba(255, 209, 239, 0.8);
+  box-shadow: 5px 10px 20px rgba(255, 209, 239, 0.8);
 }
 
 .bouquet-name {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #693d84;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
 }
 
 .bouquet-description {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #633560;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .bouquet-meaning {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #633560;
 }
 
 /* Button Styling */
 .restart-button {
-  padding: 0.8rem 2rem;
-  font-size: 1rem;
+  padding: 0.7rem 1.8rem;
+  font-size: 0.9rem;
   font-weight: bold;
   color: white;
   background-color: #693d84;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -88,7 +91,7 @@
   }
 
   .bouquet-name {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .bouquet-description, .bouquet-meaning {
@@ -96,7 +99,7 @@
   }
 
   .restart-button {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.5rem;
+    font-size: 0.8rem;
+    padding: 0.6rem 1.3rem;
   }
 }

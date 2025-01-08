@@ -92,11 +92,15 @@ export default function Questionnaires() {
   // };
 
   const handleNext = () => {
-    setFormData((prev) => ({ ...prev, [question.field]: answer }));
+    setFormData(prev => {
+      const newData = { ...prev, [question.field]: answer };
+      return newData;
+    });
+
     if (questionId < questions.length) {
       navigate(`/questionnaires/${questionId + 1}`);
     } else {
-      navigate('/results', { state: { responses: { ...formData, [question.field]: answer } } });
+      navigate('/results', { state: { formData: { ...formData, [question.field]: answer } } });
     }
   };
   
