@@ -1,0 +1,172 @@
+/* Custom Properties */
+:root {
+    --primary-color: #693d84;
+    --secondary-color: #ffd1ef;
+    --background-color: #ffeaf8;
+    --hover-color: hsl(260, 100%, 89%);
+    --active-color: hsl(261, 100%, 82%);
+    --text-color: #693d84;
+    --link-hover-color: #633560;
+    --button-bg: #693d84;
+    --button-hover-bg: hsl(260, 100%, 89%);
+    --button-active-bg: hsl(261, 100%, 82%);
+  }
+  
+  /* Tailwind Directives */
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  
+  /* Global Styles */
+  body {
+    padding: 20;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+  }
+  
+  /* Questionnaire Container */
+  .questionnaire-container {
+    border: 1px solid #96569e;
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px #ffd1ef;
+    padding: 20px;
+    margin: 100px 20px 20px 20px;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #693d84;
+    background-color: rgba(255, 234, 248, 0.6);
+    line-height: 1.8;
+  }
+  
+  /* Questionnaire Box */
+  .questionnaire-box {
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    background-color: rgba(255, 234, 248, 0.8);
+  }
+  
+  /* Question Title */
+  .question-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Options Container */
+  .options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Option Styles */
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+  }
+  
+  .option input {
+    transform: scale(1.5);
+  }
+  
+  .option label {
+    font-size: 18px;
+    color: var(--text-color);
+  }
+  
+  /* Navigation Buttons Container */
+  .nav-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adds space between buttons */
+    margin-top: 2.5rem;
+    width: 100%;
+    }
+  
+  /* Button Styles */
+  .previous-button,
+  .next-button {
+    margin: 15px auto 0px auto;
+    padding: 12px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: #ffd1ef 0 0 8px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 0.5s ease;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 150px;
+  }
+  
+  .previous-button p,
+  .next-button p {
+    font-size: 16px;
+    margin: 0;
+    position: static;
+    text-align: center;
+    color: #693d84;
+  }
+  
+  /* Button Hover States */
+  .previous-button:hover,
+  .next-button:hover {
+    letter-spacing: 3px;
+    background-color: var(--hover-color);
+    color: white;
+    box-shadow: #ffd1ef 0px 7px 29px 0px;
+  }
+  
+  /* Button Disabled States */
+  .previous-button:disabled,
+  .next-button:disabled {
+    background-color: #f2f2f2;
+    color: #d1d1d1;
+    cursor: not-allowed;
+  }
+  
+  /* Button Active States */
+  .previous-button:active,
+  .next-button:active {
+    letter-spacing: 3px;
+    background-color: var(--active-color);
+    color: white;
+    box-shadow: #ffd1ef 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .questionnaire-box {
+      padding: 1.5rem;
+      width: 90%;
+    }
+  
+    .question-title {
+      font-size: 20px;
+    }
+  
+    .option label {
+      font-size: 16px;
+    }
+  }
+  

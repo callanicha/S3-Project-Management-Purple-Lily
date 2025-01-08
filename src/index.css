@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: san-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh; 
+  display: flex;
+  overflow: hidden;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  background-color: #f9f9f9; /* Optional background color */
+}
+
+.welcomeCard, .contactCard{
+  border: 1px solid #96569e;
+  border-radius: 10px;
+  box-shadow: 10px 10px 40px #ffd1ef;
+  padding: 20px;
+  margin: 10px;
+  max-width: 600px;
+  width: 100%;
+  display: inline-block;
+  background-color: #ffeaf8;
+  background-color: rgba(255, 234, 248, 0.6);
+}
+
+.welcomeCard h2, .contactCard h2 {
+  font-size: 24px;
+  text-align: center;
+  color: #693d84;
+}
+
+.welcomeCard p, .contactCard p {
+  font-size: 18px;
+  margin-top: 10px;
+  position: static;
+  text-align: center;
+  color: #693d84;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.StartButton {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: #ffd1ef 0 0 8px;
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: all 0.5s ease;
+  height: 5vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.StartButton p {
+  font-size: 14px;
+  margin: 0;
+  position: static;
+  text-align: center;
+  color: #693d84;
+}
+
+.StartButton:hover{
+  letter-spacing: 3px;
+  background-color: hsl(260, 100%, 89%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: #ffd1ef 0px 7px 29px 0px;
+}
+
+.StartButton:active {
+  letter-spacing: 3px;
+  background-color: hsl(261, 100%, 82%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: #ffd1ef 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #ffeaf8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  box-shadow: 0px 20px 40px #ffeaf8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  max-width: 150px;
+  height: auto;
+  display: block;
+}
+
+.navbar a {
+  gap: 50px;
+  list-style: none;
+  position: relative;
+  margin-left: 40px;
+  font-size: 18px;
+  color: #693d84;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  text-decoration: none;
+  overflow: hidden;;
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: #633560;
+  transition: width 0.3s ease; 
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+.navbar a::after {
+  opacity: 1;
+  transform: translate3d(-100%,0,0);
+}
+
+.navbar a:hover::after, .navbar a:focus::after {
+  transform: translate3d(0,0,0);
+}
+
+.navbar a:hover {
+  color: #633560;
+}
+
+.container {
+  margin-top: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none; 
+  }
+}
